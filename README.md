@@ -153,3 +153,141 @@ public class CommmandLine1 {
   }
 }
 ```
+## 8. Explain break and continue Statement with suitable example.
+Break Statement:
+- when break statement executed causes immediate exit from that statement/code block.
+- Common uses of the break statement are to escape early from a loop or to skip the remainder of a switch.
+
+```java
+public class BreakTest {
+	public static void main (String[] mohsin) {
+		int count; 
+		for (count = 1; count <= 10; count++) {
+			if (count == 5)
+			break;
+		System.out.print (count + “ “);
+	}
+	System.out.println ("Broke out of loop at count= “ +count);
+}
+```
+Continue Statement:
+when continue statement executed in a while, for or do…while, skips the remaining statements in the loop body and proceeds with the next iteration of the loop.
+```java
+public class ContinueTest {
+	public static void main (String[]  mohsin) {
+		for (int count = 1; count <= 10; count++) {
+			if (count == 5)
+			continue;
+			System.out.print(count + " ");
+		} 
+	System.out.println("\nUsed continue to skip printing 5" );
+	}
+}
+```
+## 9. What is the difference between pre-increment, post-increment, pre-decrement and postdecrement a variable? Write different Java statements that each add (for increment) and subtract (for decrement) 1 to integer variable x.
+
+## 10. Write a Java application that calculates and prints the table of 5. Use a while loop.
+```java
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        int num = 5;
+        for(int i = 1; i <= 10; ++i)
+        {
+            System.out.printf("%d * %d = %d \n", num, i, num * i);
+        }
+    }
+}
+```
+## 11. Implement the following integer methods:
+- Method fahrenheit returns the Fahrenheit equivalent of a Celsius temperature, using the calculation: fahrenheit = 9.0 / 5.0 * celsius + 32
+```java
+import java.util.Scanner;
+class CelsiustoFahrenheit
+{
+	double fahrenheit(double c)
+	{	
+	return  ((9*c)/5)+32;
+	}
+	public static void main(String arg[])	
+	{
+	    double a,c;
+             	    Scanner sc=new Scanner(System.in);	   	 
+	    System.out.println("Enter  Celsius temperature");
+                   a=sc.nextDouble();
+	    CelsiustoFahrenheit cel=new CelsiustoFahrenheit( );
+	    double result=cel.fahrenheit(a);	
+	    System.out.println("Fahrenheit temperature is = "+result);		  	  	     
+	} 	
+}
+```
+- Method celsius returns the Celsius equivalent of a Fahrenheit temperature, using the calculation: celsius = 5.0 / 9.0 * ( fahrenheit - 32 )
+```java
+import java.util.Scanner;
+class FahrenheittoCelsius
+{
+	double celsius(double f)
+	{	
+	return  5.0 / 9.0 * ( f - 32 );
+	}
+	public static void main(String arg[])	
+	{
+	    double a,c;
+             	    Scanner sc=new Scanner(System.in);	   	 
+	    System.out.println("Enter  Fahrenheit temperature");
+                   a=sc.nextDouble();
+	    FahrenheittoCelsius cel=new FahrenheittoCelsius( );
+	    double result=cel.celsius(a);	
+	    System.out.println("Celsius temperature is = "+result);		  	  	     
+	} 	
+}
+```
+
+## 12. (Distance Between Points) Write method distance to calculate the distance between two points (x1, y1) and (x2, y2). All numbers and return values should be of type double. Incorporate this method into an application that enables the user to enter the coordinates of the points.
+```java
+class DistanceBwPoint
+{
+	public static void main(String arg[])
+	{
+             	 int x1,x2,y1,y2;
+	         double dis;
+	         Scanner sc=new Scanner(System.in);
+	         System.out.println("enter x1 point");
+                 x1=sc.nextInt();
+                 System.out.println("enter y1 point");
+                 y1=sc.nextInt();
+	         System.out.println("enter x2point");
+                 x2=sc.nextInt();
+	         System.out.println("enter y2 point");
+                 y2=sc.nextInt();
+		 dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+  	         System.out.println("distancebetween"+"("+x1+","+y1+"),"+"("+x2+","+y2+")===>"+dis);
+	}
+}
+```
+## 13. Write a java array program to display following pattern.
+```java
+import java.util.Scanner;
+
+public class display{
+   public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the number of rows: ");
+       int rows = sc.nextInt();       
+       for (int i= 0; i<= rows-1 ; i++){
+           for (int j=0; j<=i; j++){
+           	System.out.print("*"+ " ");
+           }
+           System.out.println("");
+	}
+        for (int i=rows-1; i>=0; i--)
+       {
+           for(int j=0; j <= i-1;j++)
+           {
+               System.out.print("*"+ " ");
+           }
+           System.out.println("");
+       }
+       sc.close();
+   }
+}
+```
