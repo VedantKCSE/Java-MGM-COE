@@ -185,7 +185,23 @@ public class ContinueTest {
 }
 ```
 ## 9. What is the difference between pre-increment, post-increment, pre-decrement and postdecrement a variable? Write different Java statements that each add (for increment) and subtract (for decrement) 1 to integer variable x.
+![Screenshot (20)](https://user-images.githubusercontent.com/98043938/201393746-3f9adfbf-430d-4655-a5fd-06af09228627.png)
+```java
+public class Increment {
+  public static void main( String[] args ) {
+	int c = 5;
+	System.out.println( c );
+	System.out.println( c++ );
+	System.out.println( c );
+	System.out.println();
+	c = 5;
+	System.out.println( c );
+	System.out.println( ++c );
+	System.out.println( c );
+  }
+}
 
+```
 
 ## 10. Write a Java application that calculates and prints the table of 5. Use a while loop.
 ```java
